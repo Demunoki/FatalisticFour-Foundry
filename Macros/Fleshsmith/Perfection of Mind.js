@@ -1,4 +1,4 @@
-const confirmed = false;
+let confirmed = false;
 const actorData = actor ? actor : canvas.tokens.controlled[0];
 const featData = actorData ? actorData.items.find(i => i.name==="Thesis of Flesh") : null;
 

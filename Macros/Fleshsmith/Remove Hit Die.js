@@ -1,4 +1,6 @@
 const actorData = actor ? actor : canvas.tokens.controlled[0];
+if(actorData == null) 
+    ui.notifications.warn(`Selected hero must have "Lay on Hands" feat.`);
 actorData.data.data.attributes.hd--;
   ChatMessage.create({
                             speaker: ChatMessage.getSpeaker(),

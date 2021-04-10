@@ -10,7 +10,7 @@ else
     const maxUses = Math.clamped(featUpdate.data.uses.value, 0, 
         actorData.data.data.attributes.prof);
 
-    const content = `<p><em>TEAR IT APPART!</em></p>
+    const content = `<p><em>TEAR IT APART!</em></p>
                     <p>How many dice do you want to use?</p>
                     <form>
                         <div class="form-group">

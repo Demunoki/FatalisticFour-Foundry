@@ -1,16 +1,16 @@
-let confirmed = false;
-let actorData = actor ? actor : canvas.tokens.controlled[0];
-let featData = actorData ? actorData.items.find(i => i.name==="Thesis of Flesh") : null;
+const confirmed = false;
+const actorData = actor ? actor : canvas.tokens.controlled[0];
+const featData = actorData ? actorData.items.find(i => i.name==="Thesis of Flesh") : null;
 
 if(actorData == null || featData == null) 
     ui.notifications.warn(`I have a bad feeling about this (Actor nicht gefunden)`);
 else
 {
-    let featUpdate = duplicate(featData);
-    let maxUses = Math.clamped(featUpdate.data.uses.value, 0, 
+    const featUpdate = duplicate(featData);
+    const maxUses = Math.clamped(featUpdate.data.uses.value, 0, 
         actorData.data.data.attributes.prof);
 
-    let content = `<p><em>TEAR IT APPART!</em></p>
+    const content = `<p><em>TEAR IT APPART!</em></p>
                     <p>How many dice do you want to use?</p>
                     <form>
                         <div class="form-group">
@@ -30,7 +30,7 @@ else
         close: html => {
             if (confirmed) 
             {
-                let number = Math.floor(Number(html.find('#num')[0].value));
+                const number = Math.floor(Number(html.find('#num')[0].value));
                 if (number < 1 || number > maxUses){
                     ui.notifications.warn(`Invalid number of charges entered = ${number}. Aborting action.`);}
                 else

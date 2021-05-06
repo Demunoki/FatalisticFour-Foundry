@@ -1,4 +1,3 @@
-let confirmed = false;
 let actorData = actor ? actor : canvas.tokens.controlled[0];
 let Musket = actorData ? actorData.items.find(i => i.name==="Musket") : null
 if(actorData == null|| Musket == null ) 
